@@ -1,4 +1,13 @@
-﻿
+﻿@using YoutubeWorld.Models
+@model YoutubeResultModel
 @{
     ViewBag.Title = "Home Page";
+}
+
+@foreach (var item in Model.items)
+{
+    <div>
+        <img src="@item.snippet.thumbnails.medium.url" />
+        <p>@item.snippet.title</p>
+    </div>
 }
